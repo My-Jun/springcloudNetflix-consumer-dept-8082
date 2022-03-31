@@ -1,0 +1,9 @@
+#服务消费者只需要配置启动端口
+server:
+  port: 8082
+# eureka配置
+eureka:  client:    register-with-eureka: false # 不想eureka中注册自己，消费不需要注册自己
+    service-url:
+      # 服务注册到哪里 打开eureka服务配置以配置中的地址为准 
+      # eureka配置好之后，开启eureka功能注解
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7002/eureka/,http://eureka7001.com:7003/eureka/
